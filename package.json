@@ -1,0 +1,30 @@
+{
+  "name": "ticketing-system",
+  "version": "1.0.0",
+  "description": "## System Requirements - Users can register and login - Users can view available events and their available tickets - Users can buy tickets for an event - Users can confirm or cancel an order - Users can view their order history - If a user cancels an order, the tickets should be released and the inventory should be updated",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@prisma/client": "^6.3.1",
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.13.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "helmet": "^8.0.0",
+    "ioredis": "^5.5.0",
+    "prisma": "^6.3.1",
+    "redis": "^4.7.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.3"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/ioredis": "^5.0.0"
+  }
+}
