@@ -4,7 +4,11 @@
   "description": "## System Requirements - Users can register and login - Users can view available events and their available tickets - Users can buy tickets for an event - Users can confirm or cancel an order - Users can view their order history - If a user cancels an order, the tickets should be released and the inventory should be updated",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node dist/app.js",
+    "dev": "ts-node-dev --respawn --transpile-only src/app.ts",
+    "build": "tsc",
+    "lint": "eslint . --ext .ts",
+    "lint:fix": "eslint . --ext .ts --fix"
   },
   "keywords": [],
   "author": "",
@@ -25,6 +29,10 @@
   },
   "devDependencies": {
     "@types/cors": "^2.8.17",
-    "@types/ioredis": "^5.0.0"
+    "@types/ioredis": "^5.0.0",
+    "@typescript-eslint/eslint-plugin": "^8.24.0",
+    "@typescript-eslint/parser": "^8.24.0",
+    "eslint": "^9.20.1",
+    "ts-node-dev": "^2.0.0"
   }
 }

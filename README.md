@@ -118,3 +118,57 @@ Kubernetes 配置：
 | POST | `/orders/{order_id}/confirm` | Confirm Order (Payment + Final Inventory Deduction) |
 | POST | `/orders/{order_id}/cancel` | Cancel Order (Release Inventory) |
 | GET | `/orders/{user_id}` | Query User Orders |
+
+第一階段：核心功能實作
+優先開發順序：
+1. Ticket Service（最核心）
+   ├── 票券庫存管理
+   ├── 搶票核心邏輯
+   └── 防超賣機制
+
+2. Order Service
+   ├── 基本訂單處理
+   └── 狀態管理
+
+3. Auth Service
+   └── 基本認證功能
+
+第二階段：基礎架構優化
+核心功能穩定後：
+1. 資料層優化
+   ├── Redis 快取層
+   └── 資料庫優化
+
+2. 消息佇列
+   └── Kafka 整合
+
+第三階段：才考慮 API Gateway
+系統成熟後再加入：
+1. API Gateway
+   ├── 安全性強化
+   ├── 流量控制
+   └── 監控機制
+
+第一週期：
+   重點：基本功能實現
+   - 簡單的 REST API
+   - 基本的資料庫操作
+   - 單機版本測試
+
+第二週期：
+   重點：性能優化
+   - 加入 Redis 快取
+   - 實現基本限流
+   - 資料庫優化
+
+第三週期：
+   重點：分散式架構
+   - 服務拆分
+   - 消息佇列整合
+   - 分散式事務
+
+最後階段：
+   重點：架構完善
+   - API Gateway 整合
+   - 監控系統建立
+   - 完整的 CI/CD
